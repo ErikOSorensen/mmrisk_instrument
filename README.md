@@ -5,6 +5,6 @@ This code runs as a Django project. The files distributed here are configured to
 as a local project with the development server. For proper production run, more infrastructure
 is needed.
 
-- A proper database. The experiment was run in the summer of 2019 with a Postgres.
+- A proper database. The experiment was run in the summer of 2019 with Postgres.
 - A webserver. The experiment was run in the summer of 2019 with Apache.
  
