@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% blocktrans %}Trekning av utfall for mottakeren{% endblocktrans %}{% endblock %}
+
+{% block content %}
+<article>
+<h1>{% blocktrans %}Trekning av utfall for mottakeren:{% endblocktrans %}</h1>
+<p>
+{{ message }}
+</p>
+
+
+<br>
+<form action="." method="POST">
+{% csrf_token %}
+<input type=hidden name=psid value="{{psid}}">
+<input type=hidden name=feedback value="Yes">
+<input type=submit value="{% blocktrans %}Tilbake til Norstat{% endblocktrans %}" style="font-size:20px">
+</form>
+</article>
+
+{% endblock %}

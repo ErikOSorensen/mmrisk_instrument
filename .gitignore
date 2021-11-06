@@ -1,0 +1,2 @@
+# No need to put a testing database into the repository
+db.sqlite3

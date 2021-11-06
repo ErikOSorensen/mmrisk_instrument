@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+    {% block meta %} {% endblock %}
+    <title> {% block title %} {% endblock %}</title>
+    <meta http-equiv="Pragma" content="no-cache" />
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE" />
+    <META HTTP-EQUIV="Expires" CONTENT="-1" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+    </script>
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'mmr2web/style.css' %}" />
+
+</head>
+
+<body>
+
+{% block content %}
+
+
+{% endblock %}
+
+
+
+{% block footer %}
+<hr>
+<p>
+
+{% endblock %}
+</body>
+</html>

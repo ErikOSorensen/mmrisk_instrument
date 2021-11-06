@@ -1,0 +1,625 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-06 22:34+0300\n"
+"PO-Revision-Date: 2021-10-06 22:49+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#: .\mmr2\settings.py:112
+msgid "norsk"
+msgstr "Norwegian"
+
+#: .\mmr2\settings.py:113
+msgid "English"
+msgstr "English"
+
+#: .\mmr2web\models.py:14
+msgid "røde"
+msgstr "red"
+
+#: .\mmr2web\models.py:14
+msgid "gule"
+msgstr "yellow"
+
+#: .\mmr2web\models.py:14
+msgid "grønne"
+msgstr "green"
+
+#: .\mmr2web\models.py:14 .\mmr2web\models.py:15
+msgid "blå"
+msgstr "blue"
+
+#: .\mmr2web\models.py:15
+msgid "rød"
+msgstr "red"
+
+#: .\mmr2web\models.py:15
+msgid "gul"
+msgstr "yellow"
+
+#: .\mmr2web\models.py:15
+msgid "grønn"
+msgstr "green"
+
+#: .\mmr2web\models.py:159
+#, python-format
+msgid ""
+"Du valgte det sikre utfallet med den %s terningen i situasjon %d, mottakeren "
+"får %d kr."
+msgstr ""
+"You chose the safe outcome with the %s dice in situation %d, the recipient "
+"gets %d NOK."
+
+#: .\mmr2web\models.py:163
+#, python-format
+msgid "Du valgte den %s terningen, terningen viste %d, mottakeren får %d kr."
+msgstr ""
+"You selected the %s dice, the dice showed %d, the recipient gets %d NOK."
+
+#: .\mmr2web\models.py:168
+msgid "Ingen av dine beslutninger ble trukket til å bestemme utbetaling."
+msgstr "None of your decisions were drawn to determine payment."
+
+#: .\mmr2web\models.py:170 .\mmr2web\views.py:245
+msgid "Du vil ikke få beskjed om utfallet for mottakeren."
+msgstr "You will not be notified of the outcome for the recipient."
+
+#: .\mmr2web\templates\choice.html:3
+msgid "Terning-valg"
+msgstr "Dice-selection"
+
+#: .\mmr2web\templates\choice.html:9
+#, python-format
+msgid "En %(farg)s terning "
+msgstr "A %(farg)s dice "
+
+#: .\mmr2web\templates\choice.html:12
+#, python-format
+msgid ""
+"Nå skal du bestemme mellom å rulle den %(farge)s terningen og %(nchoice)s "
+"forskjellige sikre beløp. Dersom du\n"
+"ruller terningen vil utbetalingene bli:"
+msgstr ""
+"Now you will decide between rolling the %(farge)s dice and %(nchoice)s "
+"different secure amounts. If you roll the dice, the payments will be:"
+
+#: .\mmr2web\templates\choice.html:18 .\mmr2web\templates\instructions2.html:27
+msgid "Terningen viser:"
+msgstr "The dice shows:"
+
+#: .\mmr2web\templates\choice.html:26
+#, python-format
+msgid "Betaling ved den %(farge)s terningen:"
+msgstr "Payment by the %(farge)s dice:"
+
+#: .\mmr2web\templates\choice.html:33
+msgid "På vegne av mottakeren ber vi deg å velge mellom"
+msgstr "On behalf of the recipient, we ask you to choose between"
+
+#: .\mmr2web\templates\choice.html:35
+#, python-format
+msgid "A: å rulle den %(farge)s terningen,"
+msgstr "A: to roll the %(farge)s dice,"
+
+#: .\mmr2web\templates\choice.html:36
+msgid "B: sikker betaling,"
+msgstr "B: secure payment,"
+
+#: .\mmr2web\templates\choice.html:38
+msgid "i hver av disse situasjonene (hvor den sikre betalingen varierer):"
+msgstr "in each of these situations (where the secure payment varies):"
+
+#: .\mmr2web\templates\choice.html:45 .\mmr2web\templates\instructions2.html:48
+msgid "Alternativ"
+msgstr "Option"
+
+#: .\mmr2web\templates\choice.html:46 .\mmr2web\templates\instructions2.html:49
+#, python-format
+msgid "Rulle %(farg)s terning"
+msgstr "Roll %(farg)s dice"
+
+#: .\mmr2web\templates\choice.html:46 .\mmr2web\templates\instructions2.html:49
+msgid "Sikker betaling"
+msgstr "Secure payment"
+
+#: .\mmr2web\templates\choice.html:50 .\mmr2web\templates\instructions2.html:51
+msgid "Situasjon"
+msgstr "Situation"
+
+#: .\mmr2web\templates\choice.html:62
+msgid "Jeg har tatt beslutning for alle situasjonen og vil gå videre"
+msgstr "I have made a decision for all the situation and will move on"
+
+#: .\mmr2web\templates\choice.html:66
+msgid ""
+"Husk at om du blir trukket ut til å bestemme betaling, så vil en av dine "
+"beslutninger faktisk\n"
+"bestemme betalingen for en virkelig mottaker."
+msgstr ""
+"Remember that if you are drawn to decide payment, then one of your decisions "
+"will actually determine the payment for a real recipient."
+
+#: .\mmr2web\templates\choice.html:70 .\mmr2web\templates\instructions1.html:28
+#: .\mmr2web\templates\instructions2.html:67
+msgid ""
+"Du vil bli informert om hvordan din beslutning evt. påvirker mottakerens "
+"betaling i slutten av undersøkelsen."
+msgstr ""
+"You will be informed about how your decision may affect the recipient's "
+"payment at the end of the survey."
+
+#: .\mmr2web\templates\choice.html:72 .\mmr2web\templates\instructions1.html:30
+#: .\mmr2web\templates\instructions2.html:69
+msgid ""
+"Du vil bli informert av Norstat om hvordan din beslutning evt. påvirker "
+"mottakerens betaling 7 dager etter undersøkelsen."
+msgstr ""
+"You will be informed by Norstat about how your decision may affect the "
+"recipient's payment 7 days after the survey."
+
+#: .\mmr2web\templates\choice.html:74 .\mmr2web\templates\instructions1.html:32
+#: .\mmr2web\templates\instructions2.html:71
+msgid ""
+"Du vil bli informert av Norstat om hvordan din beslutning evt. påvirker "
+"mottakerens betaling 3 måneder etter undersøkelsen."
+msgstr ""
+"You will be informed by Norstat about how your decision may affect the "
+"recipient's payment 3 months after the survey."
+
+#: .\mmr2web\templates\choice.html:76 .\mmr2web\templates\instructions2.html:73
+msgid ""
+"Du ikke vil bli informert om hvordan din beslutning evt. påvirker "
+"mottakerens betaling."
+msgstr ""
+"You will not be informed of how your decision may affect the recipient's "
+"payment."
+
+#: .\mmr2web\templates\consent.html:4
+msgid "Samtykke"
+msgstr "Consent"
+
+#: .\mmr2web\templates\consent.html:8
+msgid "Velkommen!"
+msgstr "Welcome!"
+
+#: .\mmr2web\templates\consent.html:10
+msgid ""
+"Velkommen til dette forskningsprosjektet. Vi setter stor pris på at du "
+"deltar.\n"
+"Dette er en undersøkelse om beslutningstaking. \n"
+"Norges forskningsråd har bidratt med midler til Norges handelshøyskole for å "
+"gjennomføre denne undersøkelsen."
+msgstr ""
+"Welcome to this research project. We really appreciate your participation.\n"
+"This is a survey about decision making.\n"
+"The Research Council of Norway has contributed funds to the Norwegian School "
+"of Management to carry out this study."
+
+#: .\mmr2web\templates\consent.html:15
+msgid ""
+"Du vil få instruksjoner før du skal svare på spørsmål.\n"
+"Det er ikke mulig å gå tilbake for å endre svarene dine, så les "
+"instruksjonene grundig før du tar beslutningene dine og går videre."
+msgstr ""
+"You will receive instructions before answering questions. It is not possible "
+"to go back to change your answers, so read the instructions carefully before "
+"making your decisions and moving on."
+
+#: .\mmr2web\templates\consent.html:18
+msgid ""
+"Svarene fra denne undersøkelsen vil bli anonymisert, ingen vil få vite hva "
+"du svarte.\n"
+"De anonymiserte svarene vil bli brukt til forskning på Norges "
+"handelshøyskole, og også gjort tilgjengelig for andre forskere."
+msgstr ""
+"The answers from this survey will be anonymized, no one will know what you "
+"answered.\n"
+"The anonymized answers will be used for research at the Norwegian School of "
+"Economics, and also made available to other researchers."
+
+#: .\mmr2web\templates\consent.html:21
+msgid ""
+"Etter undersøkelsen vil Norstat kunne ta kontakt for å informere deg om "
+"hvordan\n"
+"dine beslutninger påvirket utfall for andre deltakere."
+msgstr ""
+"After the survey, Norstat will be able to contact you to inform you about "
+"how your decisions affected the outcome for other participants."
+
+#: .\mmr2web\templates\consent.html:24
+msgid ""
+"Jeg har lest og forstått denne informasjonen og gir samtykke til å\n"
+"ta del i denne undersøkelsen og at Norstat kan sende meg SMS om\n"
+"hvordan mine beslutninger påvirker utfallet for andre deltakere om det\n"
+"blir aktuelt. Dette er uavhengig av om jeg er medlem i Norstatpanelet\n"
+"eller ikke."
+msgstr ""
+"I have read and understood this information and consent to\n"
+"take part in this survey and that Norstat can send me an SMS about\n"
+"how my decisions affect the outcome for other participants if it\n"
+"becomes relevant. This is regardless of whether I am a member of the Norstat "
+"panel\n"
+"or not."
+
+#: .\mmr2web\templates\consent.html:35
+msgid "Ja, gå videre til undersøkelsen"
+msgstr "Yes, go ahead with the survey"
+
+#: .\mmr2web\templates\consent.html:43
+msgid "Nei, jeg vil ikke være med"
+msgstr "No, I do not want to participate"
+
+#: .\mmr2web\templates\done.html:4
+msgid "Undersøkelse avslutta"
+msgstr "Survey completed"
+
+#: .\mmr2web\templates\done.html:8
+msgid "Undersøkelsen er avslutta"
+msgstr "The survey has been completed"
+
+#: .\mmr2web\templates\done.html:10
+msgid ""
+"Velkommen til dette forskningsprosjektet. Vi setter stor pris på din vilje "
+"til å delta,\n"
+"men vi har nå nådd måltallet vårt for antall respondenter\n"
+"og undersøkelsen er avsluttet."
+msgstr ""
+"Welcome to this research project. We greatly appreciate your willingness to "
+"participate, but we have now reached our target number for the number of "
+"respondents and the survey has been completed."
+
+#: .\mmr2web\templates\instructions1.html:4
+msgid "Instruksjoner"
+msgstr "Instructions"
+
+#: .\mmr2web\templates\instructions1.html:8
+#: .\mmr2web\templates\instructions2.html:9
+msgid "Instrukser"
+msgstr "Instructions"
+
+#: .\mmr2web\templates\instructions1.html:10
+msgid ""
+"I denne undersøkelsen vil du ta beslutninger om penger og risiko på vegne av "
+"en annen person.\n"
+"Denne andre personen er en deltaker i en annen undersøkelse og tar ikke "
+"beslutninger selv. \n"
+"Vi vil referere til denne personen som \"mottakeren\". \n"
+"Mottakeren har gjort en liten jobb, og dersom din beslutning blir gjeldende "
+"vil mottakerens betaling for denne jobben bli bestemt av beslutningen du tar "
+"på dennes vegne. \n"
+"Mottakeren er informert om dette. \n"
+"Det er viktig at du tenker på at din beslutning faktisk vil bestemme "
+"betaling for en annen person om den blir gjeldende."
+msgstr ""
+"In this survey, you will make decisions about money and risk on behalf of "
+"another person.\n"
+"This other person is a participant in another survey and does not make "
+"decisions themselves.\n"
+"We will refer to this person as the \"recipient\".\n"
+"The recipient has done a small job, and if your decision becomes effective, "
+"the recipient's payment for this job will be determined by the decision you "
+"make on the recipient's behalf.\n"
+"The recipient is informed of this.\n"
+"It is important that you keep in mind that your decision will actually "
+"determine payment for another person if it becomes effective."
+
+#: .\mmr2web\templates\instructions1.html:18
+msgid ""
+"Slik bestemmer vi om din beslutning blir gjeldende:\n"
+"Du vil ta et antall beslutninger. \n"
+"Forskerne bak undersøkelsen vil tilfeldig trekke 1/5 av alle deltakerne, \n"
+"og én beslutning fra hver av disse deltakerne vil bli gjeldende og bestemme "
+"betaling for en mottaker.\n"
+"Alle mottakerne vil få betalt i uke 48 i 2019."
+msgstr ""
+"Here's how we decide if your decision will apply:\n"
+"You will make a number of decisions.\n"
+"The researchers behind the survey will randomly draw 1/5 of all "
+"participants,\n"
+"and one decision from each of these participants will apply and determine "
+"the payment for a recipient.\n"
+"All recipients will be paid in week 48 of 2019."
+
+#: .\mmr2web\templates\instructions1.html:25
+msgid "For deg er det trukket at:"
+msgstr "For you it is drawn that:"
+
+#: .\mmr2web\templates\instructions1.html:34
+msgid ""
+"Du vil ikke bli informert om hvordan din beslutning evt. påvirker "
+"mottakerens betaling."
+msgstr ""
+"You will not be informed of how your decision may affect the recipient's "
+"payment."
+
+#: .\mmr2web\templates\instructions1.html:39
+#: .\mmr2web\templates\instructions2.html:79
+msgid "Jeg har lest og forstått disse instruksjonene:"
+msgstr "I have read and understood these instructions:"
+
+#: .\mmr2web\templates\instructions1.html:45
+#: .\mmr2web\templates\instructions2.html:84
+msgid "Ja, gå videre"
+msgstr "Yes, move on"
+
+#: .\mmr2web\templates\instructions2.html:11
+msgid ""
+"Du skal bestemme hvorvidt mottakeren skal få betalt et fast beløp eller om "
+"betalingen\n"
+"skal bestemmes ved å rulle en rettferdig terning (ingen side har større "
+"sannsynlighet enn \n"
+"de andre for å komme opp)."
+msgstr ""
+"You must decide whether the recipient should be paid a fixed amount or "
+"whether the payment\n"
+"shall be determined by rolling a fair dice (no side is more likely than\n"
+"the others to come up)."
+
+#: .\mmr2web\templates\instructions2.html:16
+msgid "Eksempel"
+msgstr "Example"
+
+#: .\mmr2web\templates\instructions2.html:19
+msgid ""
+"Du skal velge mellom å rulle en hvit (rettferdig) terning eller en sikker "
+"betaling på 40 kr\n"
+"til mottakeren. Tabellen under viser hvordan utbetalingen bestemmes om du "
+"velger å \n"
+"rulle terningen, i dette tilfellet blir utbetalingen enten ingenting (om "
+"terningen \n"
+"viser 1, 2, 3, eller 4) eller 100 kr (om terningen viser 5 eller 6):"
+msgstr ""
+"You must choose between rolling a white (fair) dice or a secure payment of "
+"NOK 40\n"
+"to the recipient. The table below shows how the payment is determined if you "
+"choose to\n"
+"roll the dice, in this case the payment will be either nothing (if the dice\n"
+"shows 1, 2, 3, or 4) or NOK 100 (if the dice shows 5 or 6):"
+
+#: .\mmr2web\templates\instructions2.html:35
+msgid "Betaling ved hvit terning:"
+msgstr "Payment by white dice:"
+
+#: .\mmr2web\templates\instructions2.html:45
+msgid "Du vil bli bedt om å gjøre valget ditt i et skjema som det under:"
+msgstr "You will be asked to make your choice in a form such as the one below:"
+
+#: .\mmr2web\templates\instructions2.html:57
+#, python-format
+msgid ""
+"Du vil få vist %(ndice)s slike skjermer, hver med en ny terning.\n"
+"Hver terning har en farge, og forholdet mellom utbetaling og det terningen \n"
+"viser avhenger av farge. Du vil bli bedt om å vurdere hver terning mot \n"
+"syv forskjellige sikre beløp (som også vil variere med terning)."
+msgstr ""
+"You will see %(ndice)s such screens, each with a new dice.\n"
+"Each dice has a color, and the relationship between the payments and what "
+"the dice show depends on the color. You will be asked to rate each dice "
+"against\n"
+"seven different safe amounts (which will also vary with the dice)."
+
+#: .\mmr2web\templates\instructions2.html:64
+msgid ""
+"at om du blir trukket ut til å bestemme betaling, så vil en av dine "
+"beslutninger faktisk\n"
+"bestemme betalingen for en virkelig mottaker."
+msgstr ""
+"If you are drawn out to decide payment, then one of your decisions will "
+"actually determine the payment for a real recipient."
+
+#: .\mmr2web\templates\login_failed.html:4
+#: .\mmr2web\templates\login_failed.html:8
+msgid "Login failed"
+msgstr "Login failed"
+
+#: .\mmr2web\templates\login_failed.html:10
+msgid ""
+"Login to the survey failed. You can attempt to start the survey again\n"
+"at the exact weblink provided to you by the survey provider."
+msgstr ""
+"Login to the survey failed. You can attempt to start the survey again at the "
+"exact weblink provided to you by the survey provider."
+
+#: .\mmr2web\templates\message.html:4
+msgid "Trekning av utfall for mottakeren"
+msgstr "Draw of outcome for the recipient"
+
+#: .\mmr2web\templates\message.html:8
+msgid "Trekning av utfall for mottakeren:"
+msgstr "Draw of outcome for the recipient:"
+
+#: .\mmr2web\templates\message.html:19
+msgid "Tilbake til Norstat"
+msgstr "Return to Norstat"
+
+#: .\mmr2web\templates\no_consent.html:9
+msgid "Ikke samtykke"
+msgstr "Do not consent"
+
+#: .\mmr2web\templates\no_consent.html:12
+msgid ""
+"Innlogging til studien virket ikke fordi\n"
+"du tidligere har indikert at du ikke gir samtykke\n"
+"til betingelsene for studiet."
+msgstr ""
+"Logging in to the study did not work because you have previously indicated "
+"that you do not consent to the conditions of the study."
+
+#: .\mmr2web\templates\q1.html:8 .\mmr2web\templates\q2.html:8
+#: .\mmr2web\templates\q3.html:8 .\mmr2web\templates\q4.html:8
+msgid "Spørsmål"
+msgstr "Questions"
+
+#: .\mmr2web\templates\q1.html:16
+msgid ""
+"Stort sett, på en skala fra 1 til 7, hvor villig er du til å ta risiko på "
+"egne vegne?"
+msgstr ""
+"In general, on a scale of 1 to 7, how willing are you to take risks on your "
+"own behalf?"
+
+#: .\mmr2web\templates\q1.html:18 .\mmr2web\templates\q2.html:18
+msgid "Lite villig til å ta risiko."
+msgstr "Unwilling to take risks."
+
+#: .\mmr2web\templates\q1.html:21 .\mmr2web\templates\q2.html:21
+#: .\mmr2web\templates\q3.html:21
+msgid "Ganske gjennomsnittlig"
+msgstr "Quite average"
+
+#: .\mmr2web\templates\q1.html:24 .\mmr2web\templates\q2.html:24
+msgid "Veldig villig til å ta risiko."
+msgstr "Very willing to take risks."
+
+#: .\mmr2web\templates\q1.html:31 .\mmr2web\templates\q2.html:31
+#: .\mmr2web\templates\q3.html:31 .\mmr2web\templates\q4.html:29
+#: .\mmr2web\templates\qbackground.html:46
+msgid "Gå videre"
+msgstr "Move on"
+
+#: .\mmr2web\templates\q2.html:16
+msgid ""
+"Hva tror du den gjennomsnittlige deltakeren i denne undersøkelsen svarer om "
+"sin egen villighet til å ta risiko (på den samme 1-7 skalaen)?"
+msgstr ""
+"What do you think the average participant in this survey answers about their "
+"own willingness to take risks (on the same 1-7 scale)?"
+
+#: .\mmr2web\templates\q3.html:16
+msgid ""
+"Stort sett, på en skala fra 1 til 7, hvor villig er du til å bidra til gode "
+"initiativ om du ikke kan vente noe igjen for det?"
+msgstr ""
+"In general, on a scale of 1 to 7, how willing are you to contribute to good "
+"initiatives if you can not expect anything in return?"
+
+#: .\mmr2web\templates\q3.html:18
+msgid "Lite villig til å bidra."
+msgstr "Unwilling to contribute."
+
+#: .\mmr2web\templates\q3.html:24
+msgid "Veldig villig til å bidra."
+msgstr "Very willing to contribute."
+
+#: .\mmr2web\templates\q4.html:16
+msgid ""
+"Hva vil du si best beskriver hvordan du opplevde å ta beslutninger på andres "
+"vegne i denne undersøkelsen?"
+msgstr ""
+"What would you say best describes how you experienced making decisions on "
+"behalf of others in this survey?"
+
+#: .\mmr2web\templates\q4.html:18
+msgid "Håpefull"
+msgstr "Hopeful"
+
+#: .\mmr2web\templates\q4.html:19
+msgid "Spent"
+msgstr "Excited"
+
+#: .\mmr2web\templates\q4.html:20
+msgid "Bekymret"
+msgstr "Worried"
+
+#: .\mmr2web\templates\q4.html:21
+msgid "Engstelig"
+msgstr "Anxious"
+
+#: .\mmr2web\templates\q4.html:22
+msgid "Ingen av delene"
+msgstr "Neither of the above"
+
+#: .\mmr2web\templates\qbackground.html:8
+msgid "Spørsmål 5-8/8, bakgrunnsinformasjon"
+msgstr "Questions 5-8/8, background information"
+
+#: .\mmr2web\templates\qbackground.html:16
+msgid "Hvilket kjønn har du?"
+msgstr "What is your gender?"
+
+#: .\mmr2web\templates\qbackground.html:18
+msgid "Mann"
+msgstr "Male"
+
+#: .\mmr2web\templates\qbackground.html:19
+msgid "Kvinne"
+msgstr "Female"
+
+#: .\mmr2web\templates\qbackground.html:22
+msgid "Hvor gammel er du?"
+msgstr "How old are you?"
+
+#: .\mmr2web\templates\qbackground.html:24
+msgid "(i år)"
+msgstr "(in years)"
+
+#: .\mmr2web\templates\qbackground.html:27
+msgid "Hva er din høyeste utdanning?"
+msgstr "What is your highest level of education?"
+
+#: .\mmr2web\templates\qbackground.html:29
+msgid "Ungdomsskole"
+msgstr "Junior high school"
+
+#: .\mmr2web\templates\qbackground.html:30
+msgid "Videregående"
+msgstr "High school"
+
+#: .\mmr2web\templates\qbackground.html:31
+msgid "Teknisk fagskole eller liknende"
+msgstr "Technical vocational school or similar"
+
+#: .\mmr2web\templates\qbackground.html:32
+msgid "Høyskole/universitet"
+msgstr "College/university"
+
+#: .\mmr2web\templates\qbackground.html:35
+msgid "Har du barn?"
+msgstr "Do you have children?"
+
+#: .\mmr2web\templates\qbackground.html:37
+msgid "Ja"
+msgstr "Yes"
+
+#: .\mmr2web\templates\qbackground.html:38
+msgid "Nei"
+msgstr "No"
+
+#: .\mmr2web\views.py:168
+#, python-format
+msgid ""
+"<p style=\"color:red\"> Du må gjøre et valg i alle de %d situasjonene for å "
+"kunne gå videre.</p>"
+msgstr ""
+"<p style=\"color:red\"> You must make a choice in all the %d situations in "
+"order to proceed.</p>"
+
+#: .\mmr2web\views.py:210
+msgid "<p style=\"color:red\"> Du må svare på spørsmålene.</p>"
+msgstr "<p style=\"color:red\"> You must answer the questions.</p>"
+
+#: .\mmr2web\views.py:241
+msgid "Du vil bli kontaktet av Norstat om en uke med utfallet for mottakeren."
+msgstr ""
+"You will be contacted by Norstat in a week with the outcome for the "
+"recipient."
+
+#: .\mmr2web\views.py:243
+msgid ""
+"Du vil bli kontaktet av Norstat om tre måneder med utfallet for mottakeren."
+msgstr ""
+"You will be contacted by Norstat in three months with the outcome for the "
+"recipient."

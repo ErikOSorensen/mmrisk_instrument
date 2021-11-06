@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} {% blocktrans %}Login failed{% endblocktrans %} {% endblock %}
+
+{% block content %}
+<article>
+<h1> {% blocktrans %}Login failed{% endblocktrans %}</h1>
+
+<p> {% blocktrans %}Login to the survey failed. You can attempt to start the survey again
+at the exact weblink provided to you by the survey provider.{% endblocktrans %}
+</p>
+</article>
+
+{% endblock %}

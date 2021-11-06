@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}Instruksjoner{% endblock %}
+
+{% block content %}
+<article>
+{% load staticfiles %}
+<h2>{% blocktrans %}Instrukser{% endblocktrans %} (II)</h2>
+
+<p>{% blocktrans %}Du skal bestemme hvorvidt mottakeren skal få betalt et fast beløp eller om betalingen
+skal bestemmes ved å rulle en rettferdig terning (ingen side har større sannsynlighet enn 
+de andre for å komme opp).{% endblocktrans %}
+</p>
+
+<p>{% blocktrans %}Eksempel{% endblocktrans %}:</p>
+
+<p>
+{% blocktrans %}Du skal velge mellom å rulle en hvit (rettferdig) terning eller en sikker betaling på 40 kr
+til mottakeren. Tabellen under viser hvordan utbetalingen bestemmes om du velger å 
+rulle terningen, i dette tilfellet blir utbetalingen enten ingenting (om terningen 
+viser 1, 2, 3, eller 4) eller 100 kr (om terningen viser 5 eller 6):{% endblocktrans %}
+</p>
+
+
+<table border="1">
+<tr> <td> {% blocktrans %}Terningen viser:{% endblocktrans %} </td>
+     <td> <img src="{% static "mmr2web/white-1.png" %}" alt="1"> </td>
+     <td> <img src="{% static "mmr2web/white-2.png" %}" alt="2"> </td>
+     <td> <img src="{% static "mmr2web/white-3.png" %}" alt="3"> </td>
+     <td> <img src="{% static "mmr2web/white-4.png" %}" alt="4"> </td>
+     <td> <img src="{% static "mmr2web/white-5.png" %}" alt="5"> </td>
+     <td> <img src="{% static "mmr2web/white-6.png" %}" alt="6"> </td>
+</tr>
+<tr> <td> {% blocktrans %}Betaling ved hvit terning:{% endblocktrans %} </td>
+  <td align=center> 0 kr</td>  
+  <td align=center> 0 kr</td>
+  <td align=center> 0 kr</td>
+  <td align=center> 0 kr</td>
+  <td align=center> 100 kr</td>
+  <td align=center> 100kr </td>
+</tr>
+</table>
+
+<p>{% blocktrans %}Du vil bli bedt om å gjøre valget ditt i et skjema som det under:{% endblocktrans %}</p>
+
+<table  border="1">
+<tr> <td></td> <td> </td> <td> <b>{% blocktrans %}Alternativ{% endblocktrans %} A:</b> </td> <td> <b>{% blocktrans %}Alternativ{% endblocktrans %} B:</b></td> <td></td> </tr>
+<tr> <td></td> </td> <td> <td> <b>{% blocktrans %}Rulle {{farg}} terning{% endblocktrans %} </b></td> <td> <b>{% blocktrans %}Sikker betaling{% endblocktrans %} </b></td> <td></td> </tr>
+<tr>
+  <td> {% blocktrans %}Situasjon{% endblocktrans %} 1 </td> <td> <img src="{% static "" %}mmr2web/Q-white-60.png" alt="terning" >  </td> <td align=center> <input type=radio name={{d.name}} value='risk'> </td>
+  <td  align=center> <input type=radio name=x value='safe'> </td> <td> <p style="font-size:40px"> 40 kr</p> </td> 
+ </tr>
+</table>
+
+
+<p> {% blocktrans %}Du vil få vist {{ ndice }} slike skjermer, hver med en ny terning.
+Hver terning har en farge, og forholdet mellom utbetaling og det terningen 
+viser avhenger av farge. Du vil bli bedt om å vurdere hver terning mot 
+syv forskjellige sikre beløp (som også vil variere med terning).{% endblocktrans %} </p>
+
+
+<p>
+{% blocktrans %}at om du blir trukket ut til å bestemme betaling, så vil en av dine beslutninger faktisk
+bestemme betalingen for en virkelig mottaker.{% endblocktrans %} <b>
+{% if now %} 
+ {% blocktrans %}Du vil bli informert om hvordan din beslutning evt. påvirker mottakerens betaling i slutten av undersøkelsen.{% endblocktrans %}
+{% elif week %}
+ {% blocktrans %}Du vil bli informert av Norstat om hvordan din beslutning evt. påvirker mottakerens betaling 7 dager etter undersøkelsen.{% endblocktrans %}
+{% elif month %}
+ {% blocktrans %}Du vil bli informert av Norstat om hvordan din beslutning evt. påvirker mottakerens betaling 3 måneder etter undersøkelsen.{% endblocktrans %}
+{% else %}
+ {% blocktrans %}Du ikke vil bli informert om hvordan din beslutning evt. påvirker mottakerens betaling.{% endblocktrans %}
+{% endif %}
+</b>
+</p> 
+
+
+<p>{% blocktrans %}Jeg har lest og forstått disse instruksjonene:{% endblocktrans %}</p>
+<br>
+<form action="." method="POST">
+<input type=hidden name=psid value="{{psid}}">
+<input type=hidden name=instructions2 value="Yes">
+<input type=submit value="{% blocktrans %}Ja, gå videre{% endblocktrans %}" style="font-size:20px">
+</form>
+</article>
+{% endblock %}

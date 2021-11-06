@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% blocktrans %}Samtykke{% endblocktrans %}{% endblock %}
+
+{% block content %}
+<article>
+<h1>{% blocktrans %}Velkommen!{% endblocktrans %}</h1>
+
+<p>{% blocktrans %}Velkommen til dette forskningsprosjektet. Vi setter stor pris på at du deltar.
+Dette er en undersøkelse om beslutningstaking. 
+Norges forskningsråd har bidratt med midler til Norges handelshøyskole for å gjennomføre denne undersøkelsen.{% endblocktrans %}</p>
+
+
+<p>{% blocktrans %}Du vil få instruksjoner før du skal svare på spørsmål.
+Det er ikke mulig å gå tilbake for å endre svarene dine, så les instruksjonene grundig før du tar beslutningene dine og går videre.{% endblocktrans %}</p>
+
+<p>{% blocktrans %}Svarene fra denne undersøkelsen vil bli anonymisert, ingen vil få vite hva du svarte.
+De anonymiserte svarene vil bli brukt til forskning på Norges handelshøyskole, og også gjort tilgjengelig for andre forskere.{% endblocktrans %}</p>
+
+<p>{% blocktrans %}Etter undersøkelsen vil Norstat kunne ta kontakt for å informere deg om hvordan
+dine beslutninger påvirket utfall for andre deltakere.{% endblocktrans %}</p>
+
+<p>{% blocktrans %}Jeg har lest og forstått denne informasjonen og gir samtykke til å
+ta del i denne undersøkelsen og at Norstat kan sende meg SMS om
+hvordan mine beslutninger påvirker utfallet for andre deltakere om det
+blir aktuelt. Dette er uavhengig av om jeg er medlem i Norstatpanelet
+eller ikke.{% endblocktrans %}</p>
+
+<br>
+<form action="." method="POST">
+{% csrf_token %}
+<input type=hidden name=psid value="{{psid}}">
+<input type=hidden name=consent value="Yes">
+<input type=submit value="{% blocktrans %}Ja, gå videre til undersøkelsen{% endblocktrans %}" style="font-size:20px">
+</form>
+
+<br>
+<form action="." method="POST">
+{% csrf_token %}
+<input type=hidden name=psid value="{{psid}}">
+<input type=hidden name=consent value="No">
+<input type=submit value="{% blocktrans %}Nei, jeg vil ikke være med{% endblocktrans %}" style="font-size:20px">
+</form>
+</article>
+
+{% endblock %}

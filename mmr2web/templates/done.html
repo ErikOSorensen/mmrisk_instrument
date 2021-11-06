@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% blocktrans %}Undersøkelse avslutta{% endblocktrans %}{% endblock %}
+
+{% block content %}
+<article>
+<h1>{% blocktrans %}Undersøkelsen er avslutta{% endblocktrans %}</h1>
+
+<p>{% blocktrans %}Velkommen til dette forskningsprosjektet. Vi setter stor pris på din vilje til å delta,
+men vi har nå nådd måltallet vårt for antall respondenter
+og undersøkelsen er avsluttet.{% endblocktrans %}</p>
+</article>
+
+{% endblock %}

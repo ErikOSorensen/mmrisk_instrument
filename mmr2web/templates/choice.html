@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% blocktrans %}Terning-valg{% endblocktrans %}{% endblock %}
+
+{% block content %}
+<article>
+{% load static %}
+
+<h2> {% blocktrans %}En {{ farg }} terning {% endblocktrans %}</h2>
+
+
+<p> {% blocktrans %}Nå skal du bestemme mellom å rulle den {{ farge }} terningen og {{ nchoice }} forskjellige sikre beløp. Dersom du
+ruller terningen vil utbetalingene bli:{% endblocktrans %}<p>
+
+
+
+<table  border="1">
+<tr> <td> {% blocktrans %}Terningen viser:{% endblocktrans %} </td>
+<td>  <img src="{% static "" %}mmr2web/{{ color }}-1.png" alt="1"> </td>
+<td>  <img src="{% static "" %}mmr2web/{{ color }}-2.png" alt="2"> </td>
+<td>  <img src="{% static "" %}mmr2web/{{ color }}-3.png" alt="3"> </td>
+<td>  <img src="{% static "" %}mmr2web/{{ color }}-4.png" alt="4"> </td>
+<td>  <img src="{% static "" %}mmr2web/{{ color }}-5.png" alt="5"> </td>
+<td>  <img src="{% static "" %}mmr2web/{{ color }}-6.png" alt="6"> </td>
+</tr>
+<tr> <td> {% blocktrans %}Betaling ved den {{ farge }} terningen:{% endblocktrans %} </td>
+{% for face in dicefaces %}
+<td align=center><p style="font-size:25px">  {{ face }} kr</p>  </td>
+{% endfor %}
+</tr>
+</table>
+
+<P> {% blocktrans %}På vegne av mottakeren ber vi deg å velge mellom{% endblocktrans %}
+<ul>
+<li> {% blocktrans %}A: å rulle den {{ farge }} terningen,{% endblocktrans %} </li>
+<li> {% blocktrans %}B: sikker betaling,{% endblocktrans %} </li>
+</ul>
+{% blocktrans %}i hver av disse situasjonene (hvor den sikre betalingen varierer):{% endblocktrans %}</p>
+
+
+<form action="." method="POST">
+<input type=hidden name=psid value="{{psid}}">
+
+<table  border="1">
+<tr> <td></td> <td> </td> <td> <b>{% blocktrans %}Alternativ{% endblocktrans %} A:</b> </td> <td> <b>{% blocktrans %}Alternativ{% endblocktrans %} B:</b></td> <td></td> </tr>
+<tr> <td></td> </td> <td> <td> <b>{% blocktrans %}Rulle {{farg}} terning{% endblocktrans %} </b></td> <td> <b>{% blocktrans %}Sikker betaling{% endblocktrans %} </b></td> <td></td> </tr>
+
+{% for d in dice %}
+<tr> 
+  <td>  {% blocktrans %}Situasjon{% endblocktrans %} {{ d.sitnr }}</td> <td> <img src="{% static "" %}mmr2web/Q-{{ color }}-60.png" alt="terning" >  </td> <td align=center> <input type=radio name={{d.name}} value='risk'> </td>
+  <td  align=center> <input type=radio name={{d.name}} value='safe'> </td> <td> <p style="font-size:35px"> {{ d.safe }} kr</p> </td> 
+ </tr>
+{% endfor %}
+
+
+</table>
+{% if error %}
+{{ error|safe }}
+{% endif %}
+
+<br>
+<input style="font-size:20px" type=submit value="{% blocktrans %}Jeg har tatt beslutning for alle situasjonen og vil gå videre{% endblocktrans %}">
+</form>
+
+<p>
+{% blocktrans %}Husk at om du blir trukket ut til å bestemme betaling, så vil en av dine beslutninger faktisk
+bestemme betalingen for en virkelig mottaker.{% endblocktrans %}
+<b>
+{% if now %} 
+ {% blocktrans %}Du vil bli informert om hvordan din beslutning evt. påvirker mottakerens betaling i slutten av undersøkelsen.{% endblocktrans %}
+{% elif week %}
+ {% blocktrans %}Du vil bli informert av Norstat om hvordan din beslutning evt. påvirker mottakerens betaling 7 dager etter undersøkelsen.{% endblocktrans %}
+{% elif month %}
+ {% blocktrans %}Du vil bli informert av Norstat om hvordan din beslutning evt. påvirker mottakerens betaling 3 måneder etter undersøkelsen.{% endblocktrans %}
+{% else %}
+ {% blocktrans %}Du ikke vil bli informert om hvordan din beslutning evt. påvirker mottakerens betaling.{% endblocktrans %}
+{% endif %}
+</b>
+</p> 
+
+
+</article>
+
+{% endblock %}

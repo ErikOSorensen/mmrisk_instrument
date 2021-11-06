@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %}{% blocktrans %}Instruksjoner{% endblocktrans %}{% endblock %}
+
+{% block content %}
+<article>
+<h2>{% blocktrans %}Instrukser{% endblocktrans %} (I)</h2>
+
+<p> {% blocktrans %}I denne undersøkelsen vil du ta beslutninger om penger og risiko på vegne av en annen person.
+Denne andre personen er en deltaker i en annen undersøkelse og tar ikke beslutninger selv. 
+Vi vil referere til denne personen som "mottakeren". 
+Mottakeren har gjort en liten jobb, og dersom din beslutning blir gjeldende vil mottakerens betaling for denne jobben bli bestemt av beslutningen du tar på dennes vegne. 
+Mottakeren er informert om dette. 
+Det er viktig at du tenker på at din beslutning faktisk vil bestemme betaling for en annen person om den blir gjeldende.{% endblocktrans %}
+</p>
+
+<p>{% blocktrans %}Slik bestemmer vi om din beslutning blir gjeldende:
+Du vil ta et antall beslutninger. 
+Forskerne bak undersøkelsen vil tilfeldig trekke 1/5 av alle deltakerne, 
+og én beslutning fra hver av disse deltakerne vil bli gjeldende og bestemme betaling for en mottaker.
+Alle mottakerne vil få betalt i uke 48 i 2019.{% endblocktrans %}
+</p>
+
+<p>{% blocktrans %}For deg er det trukket at:{% endblocktrans %}
+<v>
+{% if now %} 
+ {% blocktrans %}Du vil bli informert om hvordan din beslutning evt. påvirker mottakerens betaling i slutten av undersøkelsen.{% endblocktrans %}
+{% elif week %}
+ {% blocktrans %}Du vil bli informert av Norstat om hvordan din beslutning evt. påvirker mottakerens betaling 7 dager etter undersøkelsen.{% endblocktrans %}
+{% elif month %}
+ {% blocktrans %}Du vil bli informert av Norstat om hvordan din beslutning evt. påvirker mottakerens betaling 3 måneder etter undersøkelsen.{% endblocktrans %}
+{% else %}
+{% blocktrans %}Du vil ikke bli informert om hvordan din beslutning evt. påvirker mottakerens betaling.{% endblocktrans %}
+{% endif %}
+</b>
+</p> 
+
+<p>{% blocktrans %}Jeg har lest og forstått disse instruksjonene:{% endblocktrans %}</p>
+
+<br>
+<form action="." method="POST">
+<input type=hidden name=psid value="{{psid}}">
+<input type=hidden name=instructions1 value="Yes">
+<input type=submit value="{% blocktrans %}Ja, gå videre{% endblocktrans %}" style="font-size:20px">
+</form>
+</article>
+
+{% endblock %}

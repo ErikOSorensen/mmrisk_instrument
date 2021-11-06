@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} Spørsmål 2/8 {% endblock %}
+
+{% block content %}
+<article>
+<h1> {% blocktrans %}Spørsmål{% endblocktrans %} 2 / 8 </h1>
+
+
+{% if error %}
+{{ error|safe }}
+{% endif %}
+<form action="." method="POST">
+
+<p>{% blocktrans %}Hva tror du den gjennomsnittlige deltakeren i denne undersøkelsen svarer om sin egen villighet til å ta risiko (på den samme 1-7 skalaen)?{% endblocktrans %}</p>
+<table>
+<tr>  <td align=center> <input type=radio name=answer2 value=1></td> <td> 1: {% blocktrans %}Lite villig til å ta risiko.{% endblocktrans %}</td></tr>
+<tr> <td align=center> <input type=radio name=answer2 value=2></td> <td>2 </td> </tr>
+<tr> <td align=center> <input type=radio name=answer2 value=3></td> <td>3 </td> </tr>
+<tr> <td align=center> <input type=radio name=answer2 value=4></td> <td>4: {% blocktrans %}Ganske gjennomsnittlig{% endblocktrans %} </td> </tr>
+<tr> <td align=center> <input type=radio name=answer2 value=5></td> <td>5 </td> </tr>
+<tr> <td align=center> <input type=radio name=answer2 value=6></td> <td>6 </td> </tr>
+<tr> <td align=center> <input type=radio name=answer2 value=7></td> <td>7: {% blocktrans %}Veldig villig til å ta risiko.{% endblocktrans %} </td> </tr>
+</table>
+
+<br>
+<input type=hidden name=psid value="{{psid}}">
+<input type=hidden name=qtype value='q2'>
+<input type=hidden name=items value='answer2'>
+<input type=submit value="{% blocktrans %}Gå videre{% endblocktrans %}" style="font-size:20px">
+</form>
+</article>
+{% endblock %}

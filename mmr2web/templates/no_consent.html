@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} Ikke samtykke {% endblock %}
+
+{% block content %}
+
+<article>
+<h1> {% blocktrans %}Ikke samtykke{% endblocktrans %}</h1>
+
+<p> 
+{% blocktrans %}Innlogging til studien virket ikke fordi
+du tidligere har indikert at du ikke gir samtykke
+til betingelsene for studiet.{% endblocktrans %}
+</p>
+
+</article>
+{% endblock %}

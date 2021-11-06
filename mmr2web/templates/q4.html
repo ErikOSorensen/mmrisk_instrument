@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} Spørsmål 4/8 {% endblock %}
+
+{% block content %}
+<article>
+<h1> {% blocktrans %}Spørsmål{% endblocktrans %} 4 / 8 </h1>
+
+
+{% if error %}
+{{ error|safe }}
+{% endif %}
+<form action="." method="POST">
+
+<p>{% blocktrans %}Hva vil du si best beskriver hvordan du opplevde å ta beslutninger på andres vegne i denne undersøkelsen?{% endblocktrans %}</p>
+<table>
+<tr>  <td align=center> <input type=radio name=answer4 value=1></td> <td> {% blocktrans %}Håpefull{% endblocktrans %} </td></tr>
+<tr> <td align=center> <input type=radio name=answer4 value=2></td> <td>{% blocktrans %}Spent{% endblocktrans %} </td> </tr>
+<tr> <td align=center> <input type=radio name=answer4 value=3></td> <td>{% blocktrans %}Bekymret{% endblocktrans %} </td> </tr>
+<tr> <td align=center> <input type=radio name=answer4 value=4></td> <td>{% blocktrans %}Engstelig{% endblocktrans %} </td> </tr>
+<tr> <td align=center> <input type=radio name=answer4 value=5></td> <td>{% blocktrans %}Ingen av delene{% endblocktrans %} </td> </tr>
+</table>
+
+<br>
+<input type=hidden name=psid value="{{psid}}">
+<input type=hidden name=qtype value='q4'>
+<input type=hidden name=items value='answer4'>
+<input type=submit value="{% blocktrans %}Gå videre{% endblocktrans %}" style="font-size:20px">
+</form>
+</article>
+{% endblock %}

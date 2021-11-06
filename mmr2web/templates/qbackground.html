@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block title %} Spørsmål 5-8/8 {% endblock %}
+
+{% block content %}
+<article>
+<h1> {% blocktrans %}Spørsmål 5-8/8, bakgrunnsinformasjon{% endblocktrans %} </h1>
+
+
+{% if error %}
+{{ error|safe }}
+{% endif %}
+<form action="." method="POST">
+
+<p> {% blocktrans %}Hvilket kjønn har du?{% endblocktrans %}</p>
+<table>
+<tr>  <td align=center> <input type=radio name=answer5 value=1></td> <td> {% blocktrans %}Mann{% endblocktrans %} </td></tr>
+<tr> <td align=center> <input type=radio name=answer5 value=2></td> <td> {% blocktrans %}Kvinne{% endblocktrans %}</td> </tr>
+</table>
+
+<p> {% blocktrans %}Hvor gammel er du?{% endblocktrans %} </p>
+    <table>
+    <tr> <td align=center> <input type=textfield name=answer6></td> <td> {% blocktrans %}(i år){% endblocktrans %} </td></tr>
+</table>
+
+<p>{% blocktrans %}Hva er din høyeste utdanning?{% endblocktrans %}</p>
+<table>
+<tr>  <td align=center> <input type=radio name=answer7 value=1></td> <td> {% blocktrans %}Ungdomsskole{% endblocktrans %}</td></tr>
+<tr> <td align=center> <input type=radio name=answer7 value=2></td> <td> {% blocktrans %}Videregående{% endblocktrans %} </td> </tr>
+<tr> <td align=center> <input type=radio name=answer7 value=3></td> <td> {% blocktrans %}Teknisk fagskole eller liknende{% endblocktrans %} </td> </tr>
+<tr> <td align=center> <input type=radio name=answer7 value=4></td> <td> {% blocktrans %}Høyskole/universitet{% endblocktrans %} </td> </tr>
+</table>
+
+<p> {% blocktrans %}Har du barn?{% endblocktrans %}</p>
+<table>
+<tr>  <td align=center> <input type=radio name=answer8 value=1></td> <td> {% blocktrans %}Ja{% endblocktrans %} </td></tr>
+<tr> <td align=center> <input type=radio name=answer8 value=2></td> <td> {% blocktrans %}Nei{% endblocktrans %} </td> </tr>
+</table>
+
+
+<br>
+<input type=hidden name=psid value="{{psid}}">
+<input type=hidden name=qtype value='qbackground'>
+<input type=hidden name=items value='answer5,answer6,answer7,answer8'>
+<input type=submit value="{% blocktrans %}Gå videre{% endblocktrans %}" style="font-size:20px">
+</form>
+</article>
+{% endblock %}
